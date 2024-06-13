@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 /* end of font face definitions */
@@ -149,4 +151,70 @@ p {
 .category-picture {
   display: flex;
   align-items: center;
+}
+
+#bols-header {
+  margin-top: 160px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#bols-logo {
+  width: 160px;
+}
+
+#bols-tagline {
+  color: #000;
+  font-family: "BM DoHyeon";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#bols-highlights {
+  margin-top: 80px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.bols-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bols-highlight-picture {
+  width: 300px;
+}
+
+.bols-highlight-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.bols-menu-item-name {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+}
+
+.bols-menu-item-description {
+  color: #454545;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
