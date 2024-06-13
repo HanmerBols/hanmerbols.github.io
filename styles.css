@@ -138,6 +138,12 @@ p {
   line-height: normal;
 }
 
+.category-title-decoration {
+  z-index: -1;
+  position: relative;
+  top: -48px;
+}
+
 .category-description {
   align-self: stretch;
   color: var(--Gray-3, #828282);
@@ -264,6 +270,12 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.location-title-decoration {
+  z-index: -1;
+  position: relative;
+  top: -70px;
 }
 
 #location-subtitle {
