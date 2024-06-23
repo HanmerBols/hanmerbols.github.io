@@ -207,98 +207,13 @@ p {
     cover no-repeat;
 }
 
-#bols-header {
-  margin-top: 160px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-#bols-logo {
-  width: 160px;
-}
-
-#bols-tagline {
-  color: #000;
-  font-family: "BM DoHyeon";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-#bols-highlights {
-  margin-top: 80px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.bols-highlight {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.bols-highlight-picture {
-  width: 300px;
-}
-
-.bols-highlight-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-}
-
-.bols-menu-item-name {
-  overflow: hidden;
-  color: #000;
-  text-overflow: ellipsis;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 30px */
-}
-
-.bols-menu-item-description {
-  color: #454545;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
-
-#menu-button {
-  margin-top: 80px;
-  display: inline-flex;
-  height: 48px;
-  padding: 0px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: #000;
-  color: #fff;
-  font-family: Outfit;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 30px */
-}
 
 #location-section {
-  margin-top: 160px;
-  margin-bottom: 160px;
-  display: inline-flex;
+  display: flex;
+  padding: 40px 0px;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
 }
 
 #location-header {
@@ -308,33 +223,38 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 0px;
 }
 
 #location-title {
-  color: #000;
+  color: var(--Brown-300, #3C2520);
+  font-feature-settings: 'clig' off, 'liga' off;
+  
+  /* Header/H1 */
   font-family: "BM DoHyeon";
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 100%; /* 48px */
 }
 
 .location-title-decoration {
   z-index: -1;
   position: relative;
-  top: -70px;
+  top: -20px;
 }
 
 #location-subtitle {
-  align-self: stretch;
-  color: #686868;
+  color: var(--Brown-200, #64524E);
   text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  
+  /* Header/H5 */
   font-family: "BM DoHyeon";
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 100%; /* 20px */
 }
 
 #location-content {
