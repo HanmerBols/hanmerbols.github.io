@@ -103,6 +103,14 @@ p {
   width: 100%;
 }
 
+#main-nav {
+  display: flex;
+  padding: 40px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
 #introduction {
   display: inline-flex;
   flex-direction: column;
@@ -133,56 +141,70 @@ p {
 }
 
 #categories {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.category {
   display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.category-text {
-  display: flex;
-  width: 600px;
-  flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
 
-.category-title {
-  color: #000;
+.category {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+}
+
+.category-overlay {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.category-text {
+  background: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  border-radius: 20px;
+
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  color: var(--Neutral-White, #fff);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Elevation/Md */
+  text-shadow: 0px 0px 4px rgba(60, 37, 32, 0.8),
+    0px 4px 40px rgba(100, 82, 78, 0.6);
+
+  /* Header/H2 */
   font-family: "BM DoHyeon";
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 100%; /* 40px */
 }
 
-.category-title-decoration {
-  z-index: -1;
-  position: relative;
-  top: -48px;
+#noodles {
+  background: url(images/placeholder_noodles.png) lightgray 50% / cover
+    no-repeat;
 }
 
-.category-description {
-  align-self: stretch;
-  color: var(--Gray-3, #828282);
-  font-family: "BM DoHyeon";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+#bols {
+  background: url(images/placeholder_bols.png) lightgray 50% / cover no-repeat;
 }
 
-.category-picture {
-  display: flex;
-  align-items: center;
+#quick-bites {
+  background: url(images/placeholder_quick_bites.png) lightgray 50% / cover
+    no-repeat;
+}
+
+#groceries-and-snacks {
+  background: url(images/placeholder_groceries_and_snacks.png) lightgray 50% /
+    cover no-repeat;
 }
 
 #bols-header {
