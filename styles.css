@@ -97,10 +97,12 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 100px;
 }
 
 #banner {
   width: 100%;
+  margin-bottom: 64px;
 }
 
 #main-nav {
@@ -112,14 +114,10 @@ p {
 }
 
 #introduction {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  text-align: center;
-  margin-top: 64px;
-  margin-bottom: 64px;
 }
 
 #intro-line-1 {
@@ -207,6 +205,224 @@ p {
     cover no-repeat;
 }
 
+#specials {
+  display: flex;
+  padding: 40px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#specials-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#specials-subtitle {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--Brown-100, #8c7f7c);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H5 */
+  font-family: "BM DoHyeon";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+}
+
+#specials-title {
+  color: var(--Brown-300, #3c2520);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H1 */
+  font-family: "BM DoHyeon";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 48px */
+}
+
+#specials-tab-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.tab-button {
+  display: flex;
+  width: 160px;
+  height: 54px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 100px;
+  border: 1px solid white;
+  background: var(--Neutral-White, #fff);
+
+  color: var(--Brown-100, #8c7f7c);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H5 */
+  font-family: "BM DoHyeon";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+}
+
+.tab-button.active {
+  border: 1px solid var(--Brown-50, #b4aba9);
+  background: var(--Neutral-White, #fff);
+
+  color: var(--Brown-300, #3c2520);
+}
+
+.special-card {
+  display: flex;
+  width: 1000px;
+  padding: 24px;
+  align-items: center;
+  gap: 60px;
+
+  border-radius: 32px;
+  border: 1px solid var(--Brown-25, #e7e4e3);
+  background: var(--Neutral-White, #fff);
+
+  /* Elevation/Sm */
+  box-shadow: 0px 4px 20px 4px rgba(60, 37, 32, 0.08);
+}
+
+.special-image {
+  display: flex;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 24px;
+  background: #fff;
+}
+
+.special-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.special-line-1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.special-title {
+  color: var(--Brown-300, #3c2520);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H3 */
+  font-family: "BM DoHyeon";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+}
+
+.special-energy {
+  display: flex;
+  padding: 4px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 100px;
+  background: #26aa53;
+
+  color: var(--Neutral-White, #fff);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133%; /* 21.28px */
+}
+
+.special-price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.special-discounted-price {
+  color: var(--Brown-200, #64524e);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133%; /* 26.6px */
+}
+
+.special-regular-price {
+  color: #c3a69f;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133%; /* 23.94px */
+  text-decoration-line: strikethrough;
+}
+
+.special-description {
+  align-self: stretch;
+  color: var(--Brown-200, #64524e);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body Md/Regular */
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%; /* 21.28px */
+}
+
+.cart-button {
+  width: 120px;
+  height: 32px;
+
+  display: flex;
+  padding: 8px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  border-radius: 12px;
+  border: 3px solid var(--Brown-300, #3c2520);
+  background: var(--Neutral-White, #fff);
+
+  color: var(--Brown-300, #3c2520);
+  font-family: "BM DoHyeon";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
 #location-section {
   display: flex;
   padding: 40px 0px;
@@ -222,7 +438,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px;
 }
 
 #location-title {

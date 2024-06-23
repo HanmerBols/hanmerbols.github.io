@@ -13,6 +13,8 @@
     <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="./fontawesome/css/brands.css" rel="stylesheet" />
     <link href="./fontawesome/css/solid.css" rel="stylesheet" />
+
+    <script defer type="text/javascript" src="./scripts.js"></script>
   </head>
 
   <body id="landing">
@@ -25,9 +27,9 @@
       <a id="order-button" href="">Order Now</a>
     </header>
 
-    <main id="content">
-      <img id="banner" src="images/placeholder_banner.png" />
+    <img id="banner" src="images/placeholder_banner.png" />
 
+    <main id="content">
       <nav id="main-nav">
         <header id="introduction">
           <h3 id="intro-line-1">Welcome to your</h3>
@@ -52,6 +54,70 @@
           </a>
         </div>
       </nav>
+
+      <div id="specials">
+        <div id="specials-header">
+          <div id="specials-subtitle">오늘의 스페셜</div>
+          <div id="specials-title">Today's Special</div>
+        </div>
+
+        <nav id="specials-tab-group">
+          <button id="monday-tab-button" class="tab-button default-open">
+            Monday
+          </button>
+          <button id="tuesday-tab-button" class="tab-button">Tuesday</button>
+          <button id="wednesday-tab-button" class="tab-button">
+            Wednesday
+          </button>
+          <button id="thursday-tab-button" class="tab-button">Thursday</button>
+          <button id="friday-tab-button" class="tab-button">Friday</button>
+          <button id="saturday-tab-button" class="tab-button">Saturday</button>
+          <button id="sunday-tab-button" class="tab-button">Sunday</button>
+        </nav>
+
+        <div id="specials-tab-content">
+          <div class="tab-content" id="monday-tab-content">
+            <div class="special-card">
+              <img class="special-image" src="images/placeholder_special.png" />
+              <div class="special-text">
+                <div class="special-line-1">
+                  <h2 class="special-title">Teriyaki Bol</h2>
+                  <div class="special-energy">326 Cal</div>
+                </div>
+
+                <div class="special-price">
+                  <h3 class="special-discounted-price">$16</h3>
+                  <h3 class="special-regular-price">Regular Price: NZD 24</h3>
+                </div>
+
+                <div class="special-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos.
+                </div>
+
+                <a class="cart-button"> Add to Cart </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tuesday-tab-content">
+            Tuesday Content
+          </div>
+          <div class="tab-content" id="wednesday-tab-content">
+            Wednesday Content
+          </div>
+          <div class="tab-content" id="thursday-tab-content">
+            Thursday Content
+          </div>
+          <div class="tab-content" id="friday-tab-content">Friday Content</div>
+          <div class="tab-content" id="saturday-tab-content">
+            Saturday Content
+          </div>
+          <div class="tab-content" id="sunday-tab-content">Sunday Content</div>
+        </div>
+      </div>
 
       <address id="location-section">
         <header id="location-header">
