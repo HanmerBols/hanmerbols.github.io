@@ -31,17 +31,6 @@ p {
 
 /* end of general styling */
 
-.button-hover {
-  border-radius: 12px;
-  border: 6px solid #ffffff;
-}
-
-.button-hover:hover {
-  border-radius: 12px;
-  border: 6px solid #fb5b53;
-  background: linear-gradient(180deg, #162b55 0%, #061023 100%);
-}
-
 #main-header {
   display: flex;
   padding: 20px 80px;
@@ -49,8 +38,20 @@ p {
   align-items: center;
 }
 
+@media screen and (max-width: 480px) {
+  #main-header {
+    padding: 16px 20px;
+  }
+}
+
 #foodway-logo {
   height: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  #foodway-logo {
+    height: 40px;
+  }
 }
 
 #weekly-sale-button {
@@ -68,6 +69,12 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+
+@media screen and (max-width: 480px) {
+  #weekly-sale-button {
+    display: none;
+  }
 }
 
 #weekly-sale-logo {
@@ -91,6 +98,12 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+
+@media screen and (max-width: 480px) {
+  #order-button {
+    display: none;
+  }
 }
 
 #affiliates {
