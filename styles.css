@@ -215,6 +215,8 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+
+  overflow-x: scroll; /* TODO */
 }
 
 .category {
@@ -283,46 +285,59 @@ p {
   align-items: center;
   gap: 40px;
 }
+@media screen and (max-width: 480px) {
+  #specials {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+}
 
 #specials-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
+
+  font-family: "Do Hyeon";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+@media screen and (max-width: 480px) {
+  #specials-header {
+    gap: 8px;
+    line-height: 133%;
+  }
 }
 
 #specials-subtitle {
-  display: flex;
-  padding: 4px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-
   color: var(--Brown-100, #8c7f7c);
 
-  /* Header/H5 */
-  font-family: "Do Hyeon";
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 20px */
+}
+@media screen and (max-width: 480px) {
+  #specials-subtitle {
+    font-size: 18px;
+  }
 }
 
 #specials-title {
   color: var(--Brown-300, #3c2520);
 
-  /* Header/H1 */
-  font-family: "Do Hyeon";
   font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 48px */
+}
+@media screen and (max-width: 480px) {
+  #specials-title {
+    font-size: 24px;
+  }
 }
 
 #specials-tab-group {
   display: flex;
   align-items: flex-start;
   gap: 4px;
+
+  overflow-x: scroll; /* TODO */
 }
 
 .tab-button {
@@ -357,8 +372,8 @@ p {
 }
 
 .special-card {
-  display: flex;
   width: 1000px;
+  display: flex;
   padding: 24px;
   align-items: center;
   gap: 60px;
@@ -369,6 +384,16 @@ p {
 
   /* Elevation/Sm */
   box-shadow: 0px 4px 20px 4px rgba(60, 37, 32, 0.08);
+}
+@media screen and (max-width: 480px) {
+  .special-card {
+    width: 320px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+
+    border-radius: 20px;
+  }
 }
 
 .special-image {
@@ -381,6 +406,12 @@ p {
   border-radius: 24px;
   background: #fff;
 }
+@media screen and (max-width: 480px) {
+  .special-image {
+    width: 300px;
+    border-radius: 16px;
+  }
+}
 
 .special-text {
   display: flex;
@@ -388,15 +419,35 @@ p {
   align-items: flex-start;
   gap: 24px;
 }
+@media screen and (max-width: 480px) {
+  .special-text {
+    gap: 20px;
+  }
+}
 
-.special-line-1 {
+@media screen and (max-width: 480px) {
+  .special-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+}
+
+.special-title {
   display: flex;
   align-items: center;
   gap: 20px;
   align-self: stretch;
 }
+@media screen and (max-width: 480px) {
+  .special-title {
+    gap: 8px;
+  }
+}
 
-.special-title {
+.special-name {
   color: var(--Brown-300, #3c2520);
 
   /* Header/H3 */
@@ -406,13 +457,18 @@ p {
   font-weight: 400;
   line-height: 100%; /* 32px */
 }
+@media screen and (max-width: 480px) {
+  .special-name {
+    font-size: 20px;
+    line-height: 133%;
+  }
+}
 
 .special-energy {
   display: flex;
   padding: 4px 20px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 
   border-radius: 100px;
   background: #26aa53;
@@ -424,6 +480,14 @@ p {
   font-style: normal;
   font-weight: 700;
   line-height: 133%; /* 21.28px */
+}
+@media screen and (max-width: 480px) {
+  .special-energy {
+    padding: 4px 16px;
+
+    font-size: 12px;
+    line-height: 133%;
+  }
 }
 
 .special-price {
@@ -442,6 +506,11 @@ p {
   font-weight: 700;
   line-height: 133%; /* 26.6px */
 }
+@media screen and (max-width: 480px) {
+  .special-discounted-price {
+    font-size: 16px;
+  }
+}
 
 .special-regular-price {
   color: #c3a69f;
@@ -451,7 +520,13 @@ p {
   font-style: normal;
   font-weight: 600;
   line-height: 133%; /* 23.94px */
-  text-decoration-line: strikethrough;
+
+  text-decoration: line-through solid #c3a69f 2px;
+}
+@media screen and (max-width: 480px) {
+  .special-regular-price {
+    font-size: 14px;
+  }
 }
 
 .special-description {
@@ -465,9 +540,13 @@ p {
   font-weight: 400;
   line-height: 133%; /* 21.28px */
 }
+@media screen and (max-width: 480px) {
+  .special-regular-price {
+    font-size: 14px;
+  }
+}
 
 .cart-button {
-  width: 120px;
   height: 32px;
 
   display: flex;
@@ -487,6 +566,11 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+@media screen and (min-width: 481px) {
+  .cart-button {
+    width: 120px;
+  }
 }
 
 #location-section {
