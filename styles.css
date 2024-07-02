@@ -37,7 +37,6 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
 @media screen and (max-width: 480px) {
   #main-header {
     padding: 16px 20px;
@@ -47,7 +46,6 @@ p {
 #foodway-logo {
   height: 60px;
 }
-
 @media screen and (max-width: 480px) {
   #foodway-logo {
     height: 40px;
@@ -70,7 +68,6 @@ p {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-
 @media screen and (max-width: 480px) {
   #weekly-sale-button {
     display: none;
@@ -99,7 +96,6 @@ p {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-
 @media screen and (max-width: 480px) {
   #order-button {
     display: none;
@@ -120,7 +116,6 @@ p {
   font-weight: 500;
   line-height: 133%; /* 21.28px */
 }
-
 @media screen and (max-width: 480px) {
   #affiliates {
     padding: 12px 16px;
@@ -132,7 +127,6 @@ p {
 
 #affiliates-intro-text {
   color: var(--Brown-100, #8c7f7c);
-  font-feature-settings: "clig" off, "liga" off;
 }
 
 .affiliate {
@@ -141,7 +135,6 @@ p {
   gap: 8px;
 
   color: var(--Brown-200, #64524e);
-  font-feature-settings: "clig" off, "liga" off;
 }
 
 .banner {
@@ -175,6 +168,12 @@ p {
   align-items: center;
   gap: 60px;
 }
+@media screen and (min-width: 481px) {
+  #main-nav {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+}
 
 #introduction {
   display: flex;
@@ -188,7 +187,6 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-
 @media screen and (max-width: 480px) {
   #introduction {
     gap: 8px;
@@ -198,7 +196,6 @@ p {
 #intro-line-1 {
   font-size: 24px;
 }
-
 @media screen and (max-width: 480px) {
   #intro-line-1 {
     font-size: 18px;
@@ -208,7 +205,6 @@ p {
 #intro-line-2 {
   font-size: 48px;
 }
-
 @media screen and (max-width: 480px) {
   #intro-line-2 {
     font-size: 24px;
@@ -249,7 +245,6 @@ p {
 
   color: var(--Neutral-White, #fff);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Elevation/Md */
   text-shadow: 0px 0px 4px rgba(60, 37, 32, 0.8),
@@ -304,7 +299,6 @@ p {
   gap: 8px;
 
   color: var(--Brown-100, #8c7f7c);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H5 */
   font-family: "Do Hyeon";
@@ -316,7 +310,6 @@ p {
 
 #specials-title {
   color: var(--Brown-300, #3c2520);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H1 */
   font-family: "Do Hyeon";
@@ -347,7 +340,6 @@ p {
 
   color: var(--Brown-100, #8c7f7c);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H5 */
   font-family: "Do Hyeon";
@@ -406,7 +398,6 @@ p {
 
 .special-title {
   color: var(--Brown-300, #3c2520);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H3 */
   font-family: "Do Hyeon";
@@ -427,7 +418,7 @@ p {
   background: #26aa53;
 
   color: var(--Neutral-White, #fff);
-  font-feature-settings: "clig" off, "liga" off;
+
   font-family: Outfit;
   font-size: 16px;
   font-style: normal;
@@ -444,7 +435,7 @@ p {
 
 .special-discounted-price {
   color: var(--Brown-200, #64524e);
-  font-feature-settings: "clig" off, "liga" off;
+
   font-family: Outfit;
   font-size: 20px;
   font-style: normal;
@@ -454,7 +445,7 @@ p {
 
 .special-regular-price {
   color: #c3a69f;
-  font-feature-settings: "clig" off, "liga" off;
+
   font-family: Outfit;
   font-size: 18px;
   font-style: normal;
@@ -466,7 +457,6 @@ p {
 .special-description {
   align-self: stretch;
   color: var(--Brown-200, #64524e);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Body Md/Regular */
   font-family: Outfit;
@@ -506,51 +496,92 @@ p {
   align-items: center;
   gap: 60px;
 }
+@media screen and (max-width: 480px) {
+  #location-section {
+    padding: 20px 16px;
+    gap: 20px;
+  }
+}
 
 #location-header {
   display: flex;
-  width: 800px;
   padding: 0px 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+
+  font-family: "Do Hyeon";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+@media screen and (max-width: 480px) {
+  #location-header {
+    gap: 0px;
+    line-height: 133%;
+  }
 }
 
 #location-title {
   color: var(--Brown-300, #3c2520);
-  font-feature-settings: "clig" off, "liga" off;
 
-  /* Header/H1 */
-  font-family: "Do Hyeon";
   font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 48px */
+}
+@media screen and (max-width: 480px) {
+  #location-title {
+    font-size: 24px;
+  }
 }
 
-.location-title-decoration {
+#location-title-decoration-desktop {
   z-index: -1;
   position: relative;
   top: -20px;
 }
+@media screen and (max-width: 480px) {
+  #location-title-decoration-desktop {
+    display: none;
+  }
+}
+
+#location-title-decoration-mobile {
+  z-index: -1;
+  position: relative;
+  top: -10px;
+}
+@media screen and (min-width: 481px) {
+  #location-title-decoration-mobile {
+    display: none;
+  }
+}
 
 #location-subtitle {
+  width: 70%;
   color: var(--Brown-200, #64524e);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
 
-  /* Header/H5 */
-  font-family: "Do Hyeon";
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 20px */
+}
+@media screen and (max-width: 480px) {
+  #location-subtitle {
+    font-size: 14px;
+  }
 }
 
 #location-content {
   display: flex;
   align-items: center;
   gap: 80px;
+}
+@media screen and (max-width: 480px) {
+  #location-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+  }
 }
 
 #google-map {
@@ -562,6 +593,12 @@ p {
   background: #fff;
   box-shadow: 0px 0px 20px 4px rgba(37, 63, 68, 0.08);
 }
+@media screen and (max-width: 480px) {
+  #google-map {
+    width: 340px;
+    height: 260px;
+  }
+}
 
 #location-text {
   display: flex;
@@ -569,6 +606,12 @@ p {
   align-items: flex-start;
   gap: 40px;
   flex: 1 0 0;
+  align-self: stretch;
+}
+@media screen and (max-width: 480px) {
+  #location-text {
+    gap: 8px;
+  }
 }
 
 #location-details {
@@ -582,6 +625,12 @@ p {
   border-radius: 20px;
   background: #f5f5f5;
 }
+@media screen and (max-width: 480px) {
+  #location-details {
+    padding: 16px;
+    gap: 8px;
+  }
+}
 
 #address {
   align-self: stretch;
@@ -591,6 +640,13 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  #address {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 133%;
+  }
 }
 
 #opening-hours {
@@ -602,6 +658,14 @@ p {
   font-weight: 400;
   line-height: normal;
 }
+@media screen and (max-width: 480px) {
+  #opening-hours {
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 133%;
+  }
+}
 
 #contact-details {
   display: flex;
@@ -610,16 +674,32 @@ p {
   align-items: flex-start;
   gap: 20px;
   align-self: stretch;
+
+  font-family: "Do Hyeon";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  #contact-details {
+    padding: 16px;
+    gap: 16px;
+
+    line-height: 133%;
+    text-align: center;
+  }
 }
 
 #enquiries-text {
   align-self: stretch;
   color: #000;
-  font-family: "Do Hyeon";
+
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  #enquiries-text {
+    font-size: 14px;
+  }
 }
 
 #contact-methods {
@@ -629,19 +709,27 @@ p {
   gap: 20px;
   align-self: stretch;
 }
+@media screen and (max-width: 480px) {
+  #contact-methods {
+    gap: 8px;
+  }
+}
 
 .contact-method {
   display: flex;
   align-items: center;
   gap: 16px;
-  align-self: stretch;
-  flex: 1 0 0;
+  /* align-self: stretch;
+  flex: 1 0 0; */
   color: #686868;
-  font-family: "Do Hyeon";
+
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  .contact-method {
+    font-size: 14px;
+    margin: auto;
+  }
 }
 
 #main-footer {
@@ -654,7 +742,6 @@ p {
   border-top: 1px solid var(--Brown-25, #e7e4e3);
 
   color: var(--Brown-100, #8c7f7c);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H6 */
   font-family: "Do Hyeon";
@@ -677,7 +764,6 @@ p {
 #subpage-title {
   color: var(--Brown-300, #3c2520);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Header/H1 */
   font-family: "Do Hyeon";
@@ -692,7 +778,7 @@ p {
 
   color: var(--Brown-200, #64524e);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
+
   font-family: Outfit;
   font-size: 20px;
   font-style: normal;
