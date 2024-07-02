@@ -42,7 +42,7 @@ p {
   background: linear-gradient(180deg, #162b55 0%, #061023 100%);
 }
 
-#landing-header {
+#main-header {
   display: flex;
   padding: 20px 80px;
   justify-content: space-between;
@@ -602,7 +602,7 @@ p {
   line-height: normal;
 }
 
-#landing-footer {
+#main-footer {
   display: flex;
   width: 100%;
   height: 200px;
