@@ -140,6 +140,7 @@ p {
   align-items: center;
   gap: 100px;
 }
+
 #main-nav {
   display: flex;
   padding: 40px 0px;
@@ -621,3 +622,53 @@ p {
   font-weight: 400;
   line-height: 100%; /* 16px */
 }
+
+/* start of subpages styling */
+
+#subpage-header {
+  margin-top: 60px;
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#subpage-title {
+  color: var(--Brown-300, #3c2520);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H1 */
+  font-family: "Do Hyeon";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%; /* 63.84px */
+}
+
+#subpage-subtitle {
+  align-self: stretch;
+
+  color: var(--Brown-200, #64524e);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133%; /* 26.6px */
+}
+
+#store-images {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.store-image {
+  border-radius: 20px;
+}
+
+/* end of subpages styling */
