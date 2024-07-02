@@ -21,7 +21,6 @@ const openTab = (event, tabContentId) => {
 
   event.currentTarget.className += " active";
   document.getElementById(tabContentId).style.display = "block";
-  scrollToTop();
 };
 
 const deactivateAllTabButtons = () => {
