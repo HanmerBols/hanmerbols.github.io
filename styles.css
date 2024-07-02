@@ -144,8 +144,20 @@ p {
   font-feature-settings: "clig" off, "liga" off;
 }
 
-#banner {
+.banner {
   width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  #banner-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  #banner-mobile {
+    display: none;
+  }
 }
 
 #content {
@@ -170,7 +182,7 @@ p {
   align-items: center;
   gap: 20px;
 
-  color: var(--Brown-300, #3C2520);
+  color: var(--Brown-300, #3c2520);
   font-family: "Do Hyeon";
   font-style: normal;
   font-weight: 400;
