@@ -660,14 +660,14 @@ p {
   line-height: 133%; /* 26.6px */
 }
 
-#store-images {
+#subpage-images {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
 }
 
-.store-image {
+.subpage-image {
   border-radius: 20px;
 }
 
