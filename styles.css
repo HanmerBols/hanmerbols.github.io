@@ -187,21 +187,21 @@ p {
 }
 
 #noodles {
-  background: url(images/placeholder_noodles.png) lightgray 50% / cover
+  background: url(images/noodles.png) lightgray 50% / cover
     no-repeat;
 }
 
 #bols {
-  background: url(images/placeholder_bols.png) lightgray 50% / cover no-repeat;
+  background: url(images/bols.png) lightgray 50% / cover no-repeat;
 }
 
 #quick-bites {
-  background: url(images/placeholder_quick_bites.png) lightgray 50% / cover
+  background: url(images/quick_bites.png) lightgray 50% / cover
     no-repeat;
 }
 
 #groceries-and-snacks {
-  background: url(images/placeholder_groceries_and_snacks.png) lightgray 50% /
+  background: url(images/groceries_and_snacks.png) lightgray 50% /
     cover no-repeat;
 }
 
