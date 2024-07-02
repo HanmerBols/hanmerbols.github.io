@@ -146,7 +146,6 @@ p {
 
 #banner {
   width: 100%;
-  margin-bottom: 64px;
 }
 
 #content {
@@ -154,6 +153,7 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 100px;
+  margin-top: 64px;
 }
 
 #main-nav {
@@ -169,24 +169,38 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  color: var(--Brown-300, #3C2520);
+  font-family: "Do Hyeon";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 480px) {
+  #introduction {
+    gap: 8px;
+  }
 }
 
 #intro-line-1 {
-  color: #000;
-  font-family: "Do Hyeon";
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+}
+
+@media screen and (max-width: 480px) {
+  #intro-line-1 {
+    font-size: 18px;
+  }
 }
 
 #intro-line-2 {
-  color: #000;
-  font-family: "Do Hyeon";
   font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+}
+
+@media screen and (max-width: 480px) {
+  #intro-line-2 {
+    font-size: 24px;
+  }
 }
 
 #categories {
@@ -641,7 +655,6 @@ p {
 /* start of subpages styling */
 
 #subpage-header {
-  margin-top: 60px;
   display: flex;
   width: 600px;
   flex-direction: column;
