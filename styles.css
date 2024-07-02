@@ -112,11 +112,6 @@ p {
   align-items: center;
   gap: 20px;
   background: var(--Neutral-25, #f7f7f7);
-}
-
-#affiliates-intro-text {
-  color: var(--Brown-100, #8c7f7c);
-  font-feature-settings: "clig" off, "liga" off;
 
   /* Body Md/Medium */
   font-family: Outfit;
@@ -124,6 +119,20 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 133%; /* 21.28px */
+}
+
+@media screen and (max-width: 480px) {
+  #affiliates {
+    padding: 12px 16px;
+    gap: 8px;
+
+    font-size: 14px;
+  }
+}
+
+#affiliates-intro-text {
+  color: var(--Brown-100, #8c7f7c);
+  font-feature-settings: "clig" off, "liga" off;
 }
 
 .affiliate {
@@ -133,13 +142,6 @@ p {
 
   color: var(--Brown-200, #64524e);
   font-feature-settings: "clig" off, "liga" off;
-
-  /* Body Md/Medium */
-  font-family: Outfit;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 133%; /* 21.28px */
 }
 
 #banner {
