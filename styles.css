@@ -213,24 +213,31 @@ p {
 
 #categories {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   gap: 20px;
-
-  overflow-x: scroll; /* TODO */
+}
+@media screen and (max-width: 480px) {
+  #categories {
+    gap: 8px;
+  }
 }
 
 .category {
+  border-radius: 20px;
   display: flex;
   width: 300px;
   height: 300px;
   align-items: center;
 }
 
-.category-overlay {
-  width: 300px;
-  height: 300px;
-  flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.2);
+@media screen and (max-width: 480px) {
+  .category {
+    width: 172px;
+    height: 172px;
+  }
 }
 
 .category-text {
@@ -258,6 +265,13 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 40px */
+}
+
+@media screen and (max-width: 480px) {
+  .category-text {
+    width: 172px;
+    height: 172px;
+  }
 }
 
 #noodles {
