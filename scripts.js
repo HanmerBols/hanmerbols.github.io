@@ -3,6 +3,8 @@ Number.prototype.mod = function (n) {
   return ((this % n) + n) % n;
 };
 
+const MOBILE_WIDTH_MAX_NUM_PIXELS = 480;
+
 const NUM_DAYS_IN_WEEK = 7;
 
 const DAYS_OF_THE_WEEK = [
@@ -30,24 +32,27 @@ const main = () => {
 };
 
 const enableTabs = () => {
-  const specialsMobileNav = document.getElementById("specials-mobile-nav");
-  const specialsTabGroup = document.getElementById("specials-tab-group");
+  const todaysDate = new Date();
+  const todaysDayOfTheWeek = DAYS_OF_THE_WEEK[todaysDate.getDay()];
 
-  if (specialsMobileNav) {
-    enableTabsForMobile();
-  } else if (specialsTabGroup) {
-    enableTabsForDesktop();
+  if (screen.width < MOBILE_WIDTH_MAX_NUM_PIXELS) {
+    enableTabsForMobile(todaysDayOfTheWeek);
   } else {
-    throw new Error("Unable to enable tabs for either mobile or desktop!");
+    enableTabsForDesktop(todaysDayOfTheWeek);
   }
 };
 
-const enableTabsForMobile = () => {
+const enableTabsForMobile = (todaysDayOfTheWeek) => {
   const previousDayButton = document.getElementById("previous-day-button");
   previousDayButton.onclick = () => activatePreviousSpecial();
 
   const nextDayButton = document.getElementById("next-day-button");
   nextDayButton.onclick = () => activateNextSpecial();
+
+  const dayOfTheWeekContainer = document.getElementById("day-of-the-week");
+  dayOfTheWeekContainer.innerText = todaysDayOfTheWeek;
+
+  openTabByDayOfTheWeek(todaysDayOfTheWeek);
 };
 
 const activatePreviousSpecial = () => {
@@ -60,10 +65,7 @@ const activatePreviousSpecial = () => {
   const previousDayOfTheWeek = DAYS_OF_THE_WEEK[previousIndex];
   dayOfTheWeekContainer.innerText = previousDayOfTheWeek;
 
-  hideAllTabContents();
-
-  const tabContentId = `${previousDayOfTheWeek.toLowerCase()}-tab-content`;
-  document.getElementById(tabContentId).style.display = "block";
+  openTabByDayOfTheWeek(previousDayOfTheWeek);
 };
 
 const activateNextSpecial = () => {
@@ -76,31 +78,36 @@ const activateNextSpecial = () => {
   const nextDayOfTheWeek = DAYS_OF_THE_WEEK[nextIndex];
   dayOfTheWeekContainer.innerText = nextDayOfTheWeek;
 
+  openTabByDayOfTheWeek(nextDayOfTheWeek);
+};
+
+const openTabByDayOfTheWeek = (dayOfTheWeek) => {
   hideAllTabContents();
 
-  const tabContentId = `${nextDayOfTheWeek.toLowerCase()}-tab-content`;
+  const tabContentId = `${dayOfTheWeek.toLowerCase()}-tab-content`;
   document.getElementById(tabContentId).style.display = "block";
 };
 
-const enableTabsForDesktop = () => {
+const enableTabsForDesktop = (todaysDayOfTheWeek) => {
   const tabButtons = document.getElementsByClassName("tab-button");
   for (const tabButton of tabButtons) {
     const tabContentId = tabButton.id.replace("button", "content");
-    tabButton.onclick = (event) => openTab(event, tabContentId);
+    tabButton.onclick = (event) => openTabById(event, tabContentId);
   }
 
-  const defaultOpenTabs = document.getElementsByClassName("default-open");
-  if (defaultOpenTabs.length > 0) {
-    defaultOpenTabs[0].click();
-  }
+  const todaysTabButtonId = `${todaysDayOfTheWeek.toLowerCase()}-tab-button`;
+  document.getElementById(todaysTabButtonId).click();
+  console.log("got here 2");
+
 };
 
-const openTab = (event, tabContentId) => {
+const openTabById = (event, tabContentId) => {
   deactivateAllTabButtons();
   hideAllTabContents();
 
   event.currentTarget.className += " active";
   document.getElementById(tabContentId).style.display = "block";
+  console.log("got here");
 };
 
 const deactivateAllTabButtons = () => {
