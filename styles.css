@@ -350,8 +350,11 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 4px;
-
-  overflow-x: scroll; /* TODO */
+}
+@media screen and (max-width: 480px) {
+  #specials-tab-group {
+    display: none;
+  }
 }
 
 .tab-button {
@@ -383,6 +386,56 @@ p {
   background: var(--Neutral-White, #fff);
 
   color: var(--Brown-300, #3c2520);
+}
+
+#specials-mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+@media screen and (min-width: 481px) {
+  #specials-mobile-nav {
+    display: none;
+  }
+}
+
+#day-of-the-week {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+
+  border-radius: 100px;
+  border: 1px solid var(--Brown-50, #b4aba9);
+  background: var(--Backgrounds-Primary, #fff);
+
+  color: var(--Brown-300, #3c2520);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Header/H6 */
+  font-family: "Do Hyeon";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%; /* 23.94px */
+}
+
+.mobile-nav-button {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+  border: 1px solid var(--Brown-50, #b4aba9);
+  background: var(--Backgrounds-Primary, #fff);
 }
 
 .special-card {
