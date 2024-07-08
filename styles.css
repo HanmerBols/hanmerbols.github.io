@@ -10,7 +10,8 @@
 
 /* start of general styling */
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -56,7 +57,7 @@ p {
   }
 }
 
-#weekly-sale-button {
+#weekly-sale-button-desktop {
   position: absolute;
   right: 280px;
   display: flex;
@@ -73,7 +74,7 @@ p {
   line-height: 150%; /* 24px */
 }
 @media screen and (max-width: 480px) {
-  #weekly-sale-button {
+  #weekly-sale-button-desktop {
     display: none;
   }
 }
@@ -82,7 +83,7 @@ p {
   width: 20px;
 }
 
-#order-button {
+#order-button-desktop {
   display: flex;
   height: 48px;
   margin-top: 4px;
@@ -101,7 +102,7 @@ p {
   line-height: 150%; /* 24px */
 }
 @media screen and (max-width: 480px) {
-  #order-button {
+  #order-button-desktop {
     display: none;
   }
 }
@@ -949,11 +950,75 @@ p {
   font-weight: 500;
   line-height: 133%; /* 21.28px */
 }
-
 @media screen and (max-width: 480px) {
   #social-medium {
     font-size: 14px;
   }
+}
+
+#mobile-bottom-bar {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: calc(100% - 32px);
+  z-index: 2;
+
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 16px 16px 0px 0px;
+  border-top: 1px solid var(--Neutral-25, #f7f7f7);
+  background: var(--Neutral-White, #fff);
+  box-shadow: 0px -4px 20px 0px rgba(6, 16, 35, 0.04);
+}
+@media screen and (min-width: 481px) {
+  #mobile-bottom-bar {
+    display: none;
+  }
+}
+
+#weekly-sale-button-mobile {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 12px;
+  border: 2px solid var(--Special-Red, #f44336);
+  background: var(--Neutral-White, #fff);
+
+  color: var(--Special-Red, #f44336);
+  font-family: "Do Hyeon";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+}
+
+#order-button-mobile {
+  display: flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 12px;
+  background: var(--Neutral-300, #061023);
+
+  color: var(--Neutral-White, var(--Backgrounds-Primary, #fff));
+  font-family: "Do Hyeon";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
 }
 
 /* start of subpages styling */
