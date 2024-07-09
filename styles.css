@@ -66,6 +66,8 @@ p {
   color: var(--Brown-200, #64524e);
 }
 
+/* start of top bar styling */
+
 #top-bar {
   z-index: 2;
   position: sticky;
@@ -96,26 +98,36 @@ p {
   }
 }
 
-#weekly-sale-button-desktop {
+#top-bar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
   position: absolute;
-  right: 280px;
+  right: 80px;
+}
+@media screen and (max-width: 480px) {
+  #top-bar-buttons {
+    display: none;
+  }
+}
+
+#weekly-sale-button-desktop {
   display: flex;
   padding: 8px 16px;
   align-items: center;
   gap: 4px;
-  border-radius: 100px;
-  border: 2px solid #f44336;
+
+  border-radius: 12px;
+  border: 2px solid var(--Special-Red, #f44336);
+  background: var(--Neutral-White, #fff);
+
   color: #f44336;
   font-family: "Do Hyeon";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
-}
-@media screen and (max-width: 480px) {
-  #weekly-sale-button-desktop {
-    display: none;
-  }
 }
 
 #weekly-sale-logo {
@@ -124,15 +136,15 @@ p {
 
 #order-button-desktop {
   display: flex;
-  height: 48px;
-  margin-top: 4px;
-  padding: 0px 40px;
+  padding: 8px 40px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   align-self: stretch;
+
   border-radius: 12px;
   background: var(--Neutral-300, #061023);
+
   color: var(--Neutral-White, #fff);
   font-family: "Do Hyeon";
   font-size: 16px;
@@ -140,11 +152,8 @@ p {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-@media screen and (max-width: 480px) {
-  #order-button-desktop {
-    display: none;
-  }
-}
+
+/* end of top bar styling */
 
 /* start of banner styling */
 
