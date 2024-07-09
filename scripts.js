@@ -97,7 +97,6 @@ const enableTabsForDesktop = (todaysDayOfTheWeek) => {
 
   const todaysTabButtonId = `${todaysDayOfTheWeek.toLowerCase()}-tab-button`;
   document.getElementById(todaysTabButtonId).click();
-  console.log("got here 2");
 
 };
 
@@ -107,7 +106,6 @@ const openTabById = (event, tabContentId) => {
 
   event.currentTarget.className += " active";
   document.getElementById(tabContentId).style.display = "block";
-  console.log("got here");
 };
 
 const deactivateAllTabButtons = () => {
