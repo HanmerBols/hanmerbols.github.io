@@ -44,13 +44,19 @@ const enableTabs = () => {
 
 const enableTabsForMobile = (todaysDayOfTheWeek) => {
   const previousDayButton = document.getElementById("previous-day-button");
-  previousDayButton.onclick = () => activatePreviousSpecial();
+  if (previousDayButton) {
+    previousDayButton.onclick = () => activatePreviousSpecial();
+  }
 
   const nextDayButton = document.getElementById("next-day-button");
-  nextDayButton.onclick = () => activateNextSpecial();
+  if (nextDayButton) {
+    nextDayButton.onclick = () => activateNextSpecial();
+  }
 
   const dayOfTheWeekContainer = document.getElementById("day-of-the-week");
-  dayOfTheWeekContainer.innerText = todaysDayOfTheWeek;
+  if (dayOfTheWeekContainer) {
+    dayOfTheWeekContainer.innerText = todaysDayOfTheWeek;
+  }
 
   openTabByDayOfTheWeek(todaysDayOfTheWeek);
 };
@@ -85,7 +91,11 @@ const openTabByDayOfTheWeek = (dayOfTheWeek) => {
   hideAllTabContents();
 
   const tabContentId = `${dayOfTheWeek.toLowerCase()}-tab-content`;
-  document.getElementById(tabContentId).style.display = "block";
+  const tabContent = document.getElementById(tabContentId);
+
+  if (tabContent) {
+    tabContent.style.display = "block";
+  }
 };
 
 const enableTabsForDesktop = (todaysDayOfTheWeek) => {
@@ -96,8 +106,11 @@ const enableTabsForDesktop = (todaysDayOfTheWeek) => {
   }
 
   const todaysTabButtonId = `${todaysDayOfTheWeek.toLowerCase()}-tab-button`;
-  document.getElementById(todaysTabButtonId).click();
+  const todaysTabButton = document.getElementById(todaysTabButtonId);
 
+  if (todaysTabButton) {
+    todaysTabButton.click();
+  }
 };
 
 const openTabById = (event, tabContentId) => {
