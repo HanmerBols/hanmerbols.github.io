@@ -85,7 +85,29 @@ p {
 @media screen and (max-width: 480px) {
   #top-bar {
     padding: 16px 20px;
+  }
+  #top-bar.landing-top-bar {
     justify-content: center;
+  }
+}
+
+#back-button {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  #back-button {
+    display: block;
+  }
+}
+
+#back-button-counterweight {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  #back-button-counterweight {
+    display: block;
+    width: 24px;
+    height: 24px;
   }
 }
 
