@@ -884,8 +884,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   #google-map {
-    width: 340px;
-    height: 260px;
+    width: 380px;
+    height: 340px;
   }
 }
 
