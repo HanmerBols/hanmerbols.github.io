@@ -368,7 +368,6 @@ p {
   height: 300px;
   align-items: center;
 }
-
 @media screen and (max-width: 480px) {
   .category {
     width: 172px;
@@ -402,7 +401,6 @@ p {
   font-weight: 400;
   line-height: 100%; /* 40px */
 }
-
 @media screen and (max-width: 480px) {
   .category-text {
     width: 172px;
@@ -411,20 +409,21 @@ p {
 }
 
 #noodles {
-  background: url(images/categories/noodles.png) lightgray 50% / cover no-repeat;
+  background: url(./assets/categories/noodles.png) lightgray 50% / cover
+    no-repeat;
 }
 
 #bols {
-  background: url(images/categories/bols.png) lightgray 50% / cover no-repeat;
+  background: url(./assets/categories/bols.png) lightgray 50% / cover no-repeat;
 }
 
 #quick-bites {
-  background: url(images/categories/quick_bites.png) lightgray 50% / cover
+  background: url(./assets/categories/quick_bites.png) lightgray 50% / cover
     no-repeat;
 }
 
 #groceries-and-snacks {
-  background: url(images/categories/groceries_and_snacks.png) lightgray 50% /
+  background: url(./assets/categories/groceries_and_snacks.png) lightgray 50% /
     cover no-repeat;
 }
 
@@ -629,7 +628,6 @@ p {
     gap: 20px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .special-card-header {
     display: flex;
@@ -1033,7 +1031,6 @@ p {
 
   border-top: 1px solid var(--Brown-25, #e7e4e3);
 }
-
 @media screen and (max-width: 480px) {
   #main-footer {
     width: calc(100% - 40px);
@@ -1053,7 +1050,6 @@ p {
   font-weight: 400;
   line-height: 133%; /* 23.94px */
 }
-
 @media screen and (max-width: 480px) {
   #copyright {
     font-size: 14px;
@@ -1065,7 +1061,6 @@ p {
   align-items: center;
   gap: 16px;
 }
-
 @media screen and (max-width: 480px) {
   #social-media {
     gap: 8px;
@@ -1098,13 +1093,13 @@ p {
     bottom: 0px;
     width: calc(100% - 32px);
     z-index: 2;
-  
+
     display: flex;
     padding: 16px;
     justify-content: center;
     align-items: center;
     gap: 16px;
-  
+
     border-radius: 16px 16px 0px 0px;
     border-top: 1px solid var(--Neutral-25, #f7f7f7);
     background: var(--Neutral-White, #fff);
