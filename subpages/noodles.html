@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-
 <html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <head>
-    <title>Hanmer Springs Foodway</title>
-    <link rel="icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Noodles @ Hanmer Springs Foodway</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
 
     <!--icons-->
-    <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
-    <link href="./fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="./fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="../fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome/css/solid.css" rel="stylesheet" />
 
-    <script defer type="text/javascript" src="./scripts.js"></script>
+    <script defer type="text/javascript" src="../scripts.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -159,9 +157,34 @@
       </a>
     </div>
 
-    <header id="top-bar" class="landing-top-bar">
-      <a href="./index.html">
-        <img id="foodway-logo" src="./images/logo/hanmer_springs_foodway.png" />
+    <header id="top-bar">
+      <div id="back-button" onclick="history.back()">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_571_879)">
+            <path
+              d="M24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0C8.8174 0 5.76516 1.26428 3.51472 3.51472C1.26428 5.76516 0 8.8174 0 12C0 15.1826 1.26428 18.2348 3.51472 20.4853C5.76516 22.7357 8.8174 24 12 24C15.1826 24 18.2348 22.7357 20.4853 20.4853C22.7357 18.2348 24 15.1826 24 12ZM12.7031 6.32812C13.1438 5.8875 13.8562 5.8875 14.2922 6.32812C14.7281 6.76875 14.7328 7.48125 14.2922 7.91719L10.2141 11.9953L14.2922 16.0734C14.7328 16.5141 14.7328 17.2266 14.2922 17.6625C13.8516 18.0984 13.1391 18.1031 12.7031 17.6625L7.82812 12.7969C7.3875 12.3562 7.3875 11.6438 7.82812 11.2078L12.7031 6.32812Z"
+              fill="#E7E4E3"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_571_879">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+
+      <a href="../index.html">
+        <img
+          id="foodway-logo"
+          src="../images/logo/hanmer_springs_foodway.png"
+        />
       </a>
 
       <div id="top-bar-buttons">
@@ -186,400 +209,31 @@
         </a>
         <a id="order-button-desktop" href="">Order Now</a>
       </div>
+
+      <div id="back-button-counterweight"></div>
     </header>
 
-    <div id="banner">
-      <video id="banner-video" autoplay muted loop playsinline>
-        <source src="./images/banner_video.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div id="banner-overlay">
-        <div id="banner-overlay-text">
-          <h1 id="banner-title">Enjoy Food Your Way.</h1>
-          <h3 id="banner-subtitle">
-            Wide selection of noodles and food bowls, crafted to your taste.
-          </h3>
-        </div>
-      </div>
-    </div>
-
     <main id="content">
-      <nav id="main-nav">
-        <header id="introduction">
-          <h3 id="intro-line-1">Welcome to your</h3>
-          <h1 id="intro-line-2">One Stop Convenience Shop</h1>
-        </header>
+      <header id="subpage-header">
+        <h1 id="subpage-title">Noodles</h1>
+        <h2 id="subpage-subtitle">Some catchy tagline for Noodles</h2>
+      </header>
 
-        <div id="categories">
-          <a class="category" id="noodles" href="./subpages/noodles.html">
-            <div class="category-text">Noodles</div>
-          </a>
+      <div id="subpage-images">
+        <img
+          class="subpage-image"
+          src="../images/noodles/noodles_1.png"
+        />
 
-          <a class="category" id="bols" href="./subpages/bols.html">
-            <div class="category-text">Bols</div>
-          </a>
-
-          <a
-            class="category"
-            id="quick-bites"
-            href="./subpages/quick_bites.html"
-          >
-            <div class="category-text">Quick Bites</div>
-          </a>
-
-          <a
-            class="category"
-            id="groceries-and-snacks"
-            href="./subpages/groceries_and_snacks.html"
-          >
-            <div class="category-text">Groceries & Snacks</div>
-          </a>
-        </div>
-      </nav>
-
-      <div id="specials">
-        <div id="specials-header">
-          <div id="specials-subtitle">오늘의 스페셜</div>
-          <div id="specials-title">Today's Special</div>
-        </div>
-
-        <nav id="specials-tab-group">
-          <button id="sunday-tab-button" class="tab-button">Sunday</button>
-          <button id="monday-tab-button" class="tab-button">Monday</button>
-          <button id="tuesday-tab-button" class="tab-button">Tuesday</button>
-          <button id="wednesday-tab-button" class="tab-button">
-            Wednesday
-          </button>
-          <button id="thursday-tab-button" class="tab-button">Thursday</button>
-          <button id="friday-tab-button" class="tab-button">Friday</button>
-          <button id="saturday-tab-button" class="tab-button">Saturday</button>
-        </nav>
-
-        <nav id="specials-mobile-nav">
-          <button id="previous-day-button" class="mobile-nav-button">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.44043 13.0591C5.85449 12.4732 5.85449 11.5216 6.44043 10.9357L12.4404 4.93568C12.8717 4.50443 13.5139 4.37786 14.0764 4.61224C14.6389 4.84661 15.0045 5.39036 15.0045 5.99974V17.9997C15.0045 18.6044 14.6389 19.1529 14.0764 19.3872C13.5139 19.6216 12.8717 19.4904 12.4404 19.0638L6.44043 13.0638V13.0591Z"
-                fill="#8C7F7C"
-              />
-            </svg>
-          </button>
-
-          <div id="day-of-the-week"></div>
-
-          <button id="next-day-button" class="mobile-nav-button">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.5592 13.0591C18.1451 12.4732 18.1451 11.5216 17.5592 10.9357L11.5592 4.93568C11.1279 4.50443 10.4857 4.37786 9.92324 4.61224C9.36074 4.84661 8.99512 5.39036 8.99512 5.99974V17.9997C8.99512 18.6044 9.36074 19.1529 9.92324 19.3872C10.4857 19.6216 11.1279 19.4904 11.5592 19.0638L17.5592 13.0638V13.0591Z"
-                fill="#8C7F7C"
-              />
-            </svg>
-          </button>
-        </nav>
-
-        <div id="specials-tab-content">
-          <div class="tab-content" id="sunday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/0_sunday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Sunday Special</h2>
-                    <div class="special-energy">320 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 20</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="monday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/1_monday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Bulgolgi Bol</h2>
-                    <div class="special-energy">326 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 24</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tuesday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/2_tuesday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Dakgalbi Bol</h2>
-                    <div class="special-energy">492 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 24</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  The best Dakgalbi ever. You won't even need to go to Korea to
-                  get a true taste of Korean delicacies. Filling up the
-                  description with more words, to make it enough to fill up the
-                  rest of the card.
-                </div>
-
-                <a class="cart-button" href=""> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="wednesday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/3_wednesday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Wednesday Special</h2>
-                    <div class="special-energy">323 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 23</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="thursday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/4_thursday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Thursday Special</h2>
-                    <div class="special-energy">324 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 24</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content" id="friday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/5_friday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Friday Special</h2>
-                    <div class="special-energy">324 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 25</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="saturday-tab-content">
-            <div class="special-card">
-              <img
-                class="special-image"
-                src="./images/daily_special/6_saturday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Saturday Special</h2>
-                    <div class="special-energy">326 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 26</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vulputate libero et velit interdum, ac aliquet odio mattis.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          class="subpage-image"
+          src="../images/noodles/noodles_2.png"
+        />
+        <img
+          class="subpage-image"
+          src="../images/noodles/noodles_3.png"
+        />
       </div>
-
-      <address id="location-section">
-        <header id="location-header">
-          <h1 id="location-title">Location</h1>
-
-          <svg
-            id="location-title-decoration-desktop"
-            width="239"
-            height="31"
-            viewBox="0 0 239 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20.1178 8.01866L126.574 10.629L238.379 0.958534L228.863 18.5674L194.623 26.2611L91.1344 23.7235L0.909052 30.0444L7.04221 13.1283L20.1178 8.01866Z"
-              fill="#93C5FF"
-            />
-          </svg>
-
-          <svg
-            id="location-title-decoration-mobile"
-            width="131"
-            height="16"
-            viewBox="0 0 131 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.9266 3.88478L69.4969 5.32095L131.01 0.000431343L125.774 9.68852L106.936 13.9214L49.9986 12.5253L0.3583 16.0029L3.73265 6.69602L10.9266 3.88478Z"
-              fill="#93C5FF"
-            />
-          </svg>
-
-          <h3 id="location-subtitle">
-            Pssst we're conveniently located just across the Hot Pools!
-          </h3>
-        </header>
-
-        <div id="location-content">
-          <iframe
-            id="google-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.525757186492!2d172.8273702760544!3d-42.52288517117818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d306303863472c9%3A0x99c0713021842c4b!2sHanmer%20Springs%20Foodway!5e0!3m2!1sen!2snz!4v1718272202335!5m2!1sen!2snz"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-
-          <div id="location-text">
-            <div id="location-details">
-              <h2 id="address">45 Amuri Avenue, Hanmer Springs 7334</h2>
-
-              <p id="opening-hours">Open Mon - Sat: 9 am - 8 pm</p>
-            </div>
-
-            <div id="contact-details">
-              <h2 id="enquiries-text">For enquiries, reach out to us at</h2>
-
-              <div id="contact-methods">
-                <div class="contact-method">
-                  <i class="fa-solid fa-envelope"></i>
-                  hanmerbols@gmail.com
-                </div>
-
-                <div class="contact-method">
-                  <i class="fa-solid fa-phone"></i>
-                  027 000 0000
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </address>
     </main>
 
     <footer id="main-footer">
