@@ -395,22 +395,23 @@ p {
 }
 
 #noodles {
-  background: url(./assets/categories/noodles.png) lightgray 50% / cover
-    no-repeat;
+  background: url(./assets/landing_page/categories/noodles.png) lightgray 50% /
+    cover no-repeat;
 }
 
 #bols {
-  background: url(./assets/categories/bols.png) lightgray 50% / cover no-repeat;
+  background: url(./assets/landing_page/categories/bols.png) lightgray 50% /
+    cover no-repeat;
 }
 
 #quick-bites {
-  background: url(./assets/categories/quick_bites.png) lightgray 50% / cover
-    no-repeat;
+  background: url(./assets/landing_page/categories/quick_bites.png) lightgray
+    50% / cover no-repeat;
 }
 
 #groceries-and-snacks {
-  background: url(./assets/categories/groceries_and_snacks.png) lightgray 50% /
-    cover no-repeat;
+  background: url(./assets/landing_page/categories/groceries_and_snacks.png)
+    lightgray 50% / cover no-repeat;
 }
 
 #specials {
@@ -882,7 +883,7 @@ p {
 }
 
 #address {
-  color: var(--Brown-300, #3C2520); 
+  color: var(--Brown-300, #3c2520);
 
   font-family: "Do Hyeon";
   font-size: 24px;
@@ -898,7 +899,7 @@ p {
 }
 
 #opening-hours {
-  color: var(--Brown-100, #8C7F7C); 
+  color: var(--Brown-100, #8c7f7c);
 
   font-family: Outfit;
   font-size: 20px;
