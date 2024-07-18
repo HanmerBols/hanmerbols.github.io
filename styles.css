@@ -427,6 +427,8 @@ p {
     lightgray 50% / cover no-repeat;
 }
 
+/* start of specials styling */
+
 #specials {
   display: flex;
   padding: 40px 0px;
@@ -439,6 +441,8 @@ p {
     margin-right: auto;
     padding: 0;
     gap: 20px;
+
+    width: 100%;
   }
 }
 
@@ -520,53 +524,39 @@ p {
   color: var(--Brown-300, #3c2520);
 }
 
-#specials-mobile-nav {
-  display: none;
-
+#specials-tab-content {
   @media (width < 480px) {
+    /* line them up horizontally */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
+    flex: 1;
+
+    /* allow for scrolling */
+    width: 100%;
+    overflow-x: auto;
+
+    /* make it smooth on iOS */
+    -webkit-overflow-scrolling: touch;
+
+    /* each slide snaps into place */
+    scroll-snap-type: x mandatory;
+    scroll-margin: 50%;
+
+    scroll-behavior: smooth;
   }
 }
 
-#day-of-the-week {
-  display: flex;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex: 1 0 0;
+.tab-content {
+  @media (width < 480px) {
+    /* make sure the width is honored */
+    flex-shrink: 0;
 
-  border-radius: 100px;
-  border: 1px solid var(--Brown-50, #b4aba9);
-  background: var(--Backgrounds-Primary, #fff);
-
-  color: var(--Brown-300, #3c2520);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Header/H6 */
-  font-family: "Do Hyeon";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 133%; /* 23.94px */
+    width: calc(100% - 8px);
+    scroll-snap-align: center;
+  }
 }
 
-.mobile-nav-button {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 100px;
-  border: 1px solid var(--Brown-50, #b4aba9);
-  background: var(--Backgrounds-Primary, #fff);
+#sunday-tab-content {
+  margin-left: 8px;
 }
 
 .special-card {
@@ -587,15 +577,38 @@ p {
     width: 320px;
     flex-direction: column;
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
 
     border-radius: 20px;
+  }
+}
+
+.day-of-the-week {
+  display: none;
+
+  @media (width < 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+
+    color: var(--Brown-300, #3c2520);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Header/H6 */
+    font-family: "Do Hyeon";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133%; /* 23.94px */
   }
 }
 
 .special-image {
   display: flex;
   width: 360px;
+  height: 360px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -605,6 +618,7 @@ p {
 
   @media (width < 480px) {
     width: 320px;
+    height: 320px;
     border-radius: 16px;
   }
 }
@@ -761,6 +775,10 @@ p {
     width: auto;
   }
 }
+
+/* end of specials styling */
+
+/* start of location styling */
 
 #location-section {
   display: flex;

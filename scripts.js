@@ -27,6 +27,8 @@ const DAY_INDEX_MAP = {
   Saturday: 6,
 };
 
+const WINDOW_WIDTH = document.documentElement.clientWidth;
+
 const main = () => {
   enableTabs();
 };
@@ -35,7 +37,7 @@ const enableTabs = () => {
   const todaysDate = new Date();
   const todaysDayOfTheWeek = DAYS_OF_THE_WEEK[todaysDate.getDay()];
 
-  if (screen.width < MOBILE_WIDTH_MAX_NUM_PIXELS) {
+  if (WINDOW_WIDTH < MOBILE_WIDTH_MAX_NUM_PIXELS) {
     enableTabsForMobile(todaysDayOfTheWeek);
   } else {
     enableTabsForDesktop(todaysDayOfTheWeek);
@@ -43,59 +45,33 @@ const enableTabs = () => {
 };
 
 const enableTabsForMobile = (todaysDayOfTheWeek) => {
-  const previousDayButton = document.getElementById("previous-day-button");
-  if (previousDayButton) {
-    previousDayButton.onclick = () => activatePreviousSpecial();
-  }
+  const dailySpecialXCoordinates = getDailySpecialXCoordinates();
 
-  const nextDayButton = document.getElementById("next-day-button");
-  if (nextDayButton) {
-    nextDayButton.onclick = () => activateNextSpecial();
-  }
-
-  const dayOfTheWeekContainer = document.getElementById("day-of-the-week");
-  if (dayOfTheWeekContainer) {
-    dayOfTheWeekContainer.innerText = todaysDayOfTheWeek;
-  }
-
-  openTabByDayOfTheWeek(todaysDayOfTheWeek);
+  viewTabByDayOfTheWeek(todaysDayOfTheWeek, dailySpecialXCoordinates);
 };
 
-const activatePreviousSpecial = () => {
-  const dayOfTheWeekContainer = document.getElementById("day-of-the-week");
-  const currentDayOfTheWeek = dayOfTheWeekContainer.innerText;
+const viewTabByDayOfTheWeek = (dayOfTheWeek, dailySpecialXCoordinates) => {
+  const specialsTabContent = document.getElementById("specials-tab-content");
+  const position = dailySpecialXCoordinates[dayOfTheWeek];
 
-  const currentIndex = DAY_INDEX_MAP[currentDayOfTheWeek];
-  const previousIndex = (currentIndex - 1).mod(NUM_DAYS_IN_WEEK);
-
-  const previousDayOfTheWeek = DAYS_OF_THE_WEEK[previousIndex];
-  dayOfTheWeekContainer.innerText = previousDayOfTheWeek;
-
-  openTabByDayOfTheWeek(previousDayOfTheWeek);
+  specialsTabContent.scrollTo(position, 0);
 };
 
-const activateNextSpecial = () => {
-  const dayOfTheWeekContainer = document.getElementById("day-of-the-week");
-  const currentDayOfTheWeek = dayOfTheWeekContainer.innerText;
+const getDailySpecialXCoordinates = () => {
+  const marginLeftPixels = 8;
+  const offset = marginLeftPixels / 2;
 
-  const currentIndex = DAY_INDEX_MAP[currentDayOfTheWeek];
-  const nextIndex = (currentIndex + 1).mod(NUM_DAYS_IN_WEEK);
+  const cardSize = WINDOW_WIDTH - marginLeftPixels;
 
-  const nextDayOfTheWeek = DAYS_OF_THE_WEEK[nextIndex];
-  dayOfTheWeekContainer.innerText = nextDayOfTheWeek;
+  const dailySpecialXCoordinate = {};
 
-  openTabByDayOfTheWeek(nextDayOfTheWeek);
-};
+  for (let index = 0; index < NUM_DAYS_IN_WEEK; index++) {
+    const dayOfTheWeek = DAYS_OF_THE_WEEK[index];
 
-const openTabByDayOfTheWeek = (dayOfTheWeek) => {
-  hideAllTabContents();
-
-  const tabContentId = `${dayOfTheWeek.toLowerCase()}-tab-content`;
-  const tabContent = document.getElementById(tabContentId);
-
-  if (tabContent) {
-    tabContent.style.display = "block";
+    dailySpecialXCoordinate[dayOfTheWeek] = offset + cardSize * index;
   }
+
+  return dailySpecialXCoordinate;
 };
 
 const enableTabsForDesktop = (todaysDayOfTheWeek) => {
@@ -104,6 +80,9 @@ const enableTabsForDesktop = (todaysDayOfTheWeek) => {
     const tabContentId = tabButton.id.replace("button", "content");
     tabButton.onclick = (event) => openTabById(event, tabContentId);
   }
+
+  deactivateAllTabButtons();
+  hideAllTabContents();
 
   const todaysTabButtonId = `${todaysDayOfTheWeek.toLowerCase()}-tab-button`;
   const todaysTabButton = document.getElementById(todaysTabButtonId);
