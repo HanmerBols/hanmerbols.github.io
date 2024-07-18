@@ -615,7 +615,6 @@ p {
 .special-image {
   display: flex;
   width: 360px;
-  height: 360px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -623,9 +622,10 @@ p {
   border-radius: 24px;
   background: #fff;
 
+  aspect-ratio: 1;
+
   @media (width < 480px) {
     width: calc(100% - 32px);
-    height: calc(100% - 32px);
     border-radius: 16px;
   }
 }
@@ -753,6 +753,8 @@ p {
 
   @media (width < 480px) {
     font-size: 14px;
+
+    height: 100px;
   }
 }
 
