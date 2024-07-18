@@ -559,6 +559,10 @@ p {
   margin-left: 8px;
 }
 
+#saturday-tab-content {
+  margin-right: 8px;
+}
+
 .special-card {
   width: 1000px;
   display: flex;
@@ -574,12 +578,15 @@ p {
   box-shadow: 0px 4px 20px 4px rgba(60, 37, 32, 0.08);
 
   @media (width < 480px) {
-    width: 320px;
+    width: calc(100% - 80px);
     flex-direction: column;
     padding: 20px;
-    gap: 20px;
+    gap: 16px;
 
     border-radius: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -617,8 +624,8 @@ p {
   background: #fff;
 
   @media (width < 480px) {
-    width: 320px;
-    height: 320px;
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
     border-radius: 16px;
   }
 }
