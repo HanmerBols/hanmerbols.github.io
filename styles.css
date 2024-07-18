@@ -622,7 +622,7 @@ p {
   border-radius: 24px;
   background: #fff;
 
-  aspect-ratio: 1;
+  aspect-ratio: 1.1;
 
   @media (width < 480px) {
     width: calc(100% - 32px);
