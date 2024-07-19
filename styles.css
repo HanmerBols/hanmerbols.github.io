@@ -539,7 +539,6 @@ p {
 
     /* each slide snaps into place */
     scroll-snap-type: x mandatory;
-    scroll-margin: 50%;
 
     scroll-behavior: smooth;
   }
@@ -555,11 +554,11 @@ p {
   }
 }
 
-#sunday-tab-content {
+.first-tab-content {
   margin-left: 8px;
 }
 
-#saturday-tab-content {
+.last-tab-content {
   margin-right: 8px;
 }
 
@@ -590,9 +589,30 @@ p {
   }
 }
 
-.day-of-the-week {
+.specials-mobile-nav {
   display: none;
 
+  @media (width < 480px) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 16px);
+  }
+}
+
+.mobile-nav-button {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+  border: 1px solid white;
+  background: var(--Backgrounds-Primary, #fff);
+}
+
+.day-of-the-week {
   @media (width < 480px) {
     display: flex;
     justify-content: center;

@@ -27,7 +27,9 @@ const DAY_INDEX_MAP = {
   Saturday: 6,
 };
 
+const DAILY_SPECIAL_MARGIN_PIXELS = 8;
 const WINDOW_WIDTH = document.documentElement.clientWidth;
+const DAILY_SPECIAL_SCROLL_AMOUNT = WINDOW_WIDTH - DAILY_SPECIAL_MARGIN_PIXELS;
 
 const main = () => {
   enableTabs();
@@ -45,30 +47,45 @@ const enableTabs = () => {
 };
 
 const enableTabsForMobile = (todaysDayOfTheWeek) => {
-  const dailySpecialXCoordinates = getDailySpecialXCoordinates();
-
-  viewTabByDayOfTheWeek(todaysDayOfTheWeek, dailySpecialXCoordinates);
-};
-
-const viewTabByDayOfTheWeek = (dayOfTheWeek, dailySpecialXCoordinates) => {
   const specialsTabContent = document.getElementById("specials-tab-content");
-  const position = dailySpecialXCoordinates[dayOfTheWeek];
+
+  const previousDayButtons = document.getElementsByClassName(
+    "previous-day-button"
+  );
+
+  for (const previousDayButton of previousDayButtons) {
+    previousDayButton.onclick = () => scrollLeftMobile(specialsTabContent);
+  }
+
+  const nextDayButtons = document.getElementsByClassName("next-day-button");
+
+  for (const nextDayButton of nextDayButtons) {
+    nextDayButton.onclick = () => scrollRightMobile(specialsTabContent);
+  }
+
+  const dailySpecialXCoordinates = getDailySpecialXCoordinates();
+  const position = dailySpecialXCoordinates[todaysDayOfTheWeek];
 
   specialsTabContent.scrollTo(position, 0);
 };
 
+const scrollLeftMobile = (element) => {
+  element.scrollBy(-DAILY_SPECIAL_SCROLL_AMOUNT, 0);
+};
+
+const scrollRightMobile = (element) => {
+  element.scrollBy(DAILY_SPECIAL_SCROLL_AMOUNT, 0);
+};
+
 const getDailySpecialXCoordinates = () => {
-  const marginLeftPixels = 8;
-  const offset = marginLeftPixels / 2;
-
-  const cardSize = WINDOW_WIDTH - marginLeftPixels;
-
+  const offset = DAILY_SPECIAL_MARGIN_PIXELS / 2;
   const dailySpecialXCoordinate = {};
 
   for (let index = 0; index < NUM_DAYS_IN_WEEK; index++) {
     const dayOfTheWeek = DAYS_OF_THE_WEEK[index];
 
-    dailySpecialXCoordinate[dayOfTheWeek] = offset + cardSize * index;
+    dailySpecialXCoordinate[dayOfTheWeek] =
+      offset + DAILY_SPECIAL_SCROLL_AMOUNT * index;
   }
 
   return dailySpecialXCoordinate;
