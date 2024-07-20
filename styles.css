@@ -139,7 +139,7 @@ p {
   gap: 4px;
 
   border-radius: 12px;
-  border: 2px solid var(--Special-Red, #f44336);
+  border: 3px solid var(--Special-Red, #f44336);
   background: var(--Neutral-White, #fff);
 
   color: #f44336;
@@ -150,19 +150,29 @@ p {
   line-height: 150%; /* 24px */
 }
 
+#weekly-sale-button-desktop:hover {
+  border: 3px solid #FFD363;
+  background: #f44336;
+
+  color: var(--Neutral-White, var(--Backgrounds-Primary, #fff));
+
+  box-shadow: 0px 4px 20px 4px rgba(60, 37, 32, 0.08);
+}
+
 #weekly-sale-logo {
   width: 20px;
 }
 
 #order-button-desktop {
   display: flex;
-  padding: 8px 40px;
+  padding: 8px 36px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   align-self: stretch;
 
   border-radius: 12px;
+  border: 3px solid #061023;
   background: var(--Neutral-300, #061023);
 
   color: var(--Neutral-White, #fff);
@@ -171,6 +181,12 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+
+
+#order-button-desktop:hover {
+  border: 3px solid #FB5B53;
+  box-shadow: 0px 4px 20px 4px rgba(60, 37, 32, 0.08); 
 }
 
 /* end of top bar styling */
@@ -804,6 +820,10 @@ p {
   @media (width < 480px) {
     width: auto;
   }
+}
+
+.cart-button:hover {
+  border: 3px solid #FB5B53;
 }
 
 /* end of specials styling */
