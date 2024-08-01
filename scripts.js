@@ -7,7 +7,7 @@ const MOBILE_WIDTH_MAX_NUM_PIXELS = 480;
 
 const NUM_DAYS_IN_WEEK = 7;
 
-const DAYS_OF_THE_WEEK = [
+const SYSTEM_DAYS_OF_THE_WEEK = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -17,14 +17,24 @@ const DAYS_OF_THE_WEEK = [
   "Saturday",
 ];
 
+const DISPLAYED_DAYS_OF_THE_WEEK = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
 const DAY_INDEX_MAP = {
-  Sunday: 0,
-  Monday: 1,
-  Tuesday: 2,
-  Wednesday: 3,
-  Thursday: 4,
-  Friday: 5,
-  Saturday: 6,
+  Monday: 0,
+  Tuesday: 1,
+  Wednesday: 2,
+  Thursday: 3,
+  Friday: 4,
+  Saturday: 5,
+  Sunday: 6,
 };
 
 const DAILY_SPECIAL_MARGIN_PIXELS = 8;
@@ -37,7 +47,7 @@ const main = () => {
 
 const enableTabs = () => {
   const todaysDate = new Date();
-  const todaysDayOfTheWeek = DAYS_OF_THE_WEEK[todaysDate.getDay()];
+  const todaysDayOfTheWeek = SYSTEM_DAYS_OF_THE_WEEK[todaysDate.getDay()];
 
   if (WINDOW_WIDTH < MOBILE_WIDTH_MAX_NUM_PIXELS) {
     enableTabsForMobile(todaysDayOfTheWeek);
@@ -82,7 +92,7 @@ const getDailySpecialXCoordinates = () => {
   const dailySpecialXCoordinate = {};
 
   for (let index = 0; index < NUM_DAYS_IN_WEEK; index++) {
-    const dayOfTheWeek = DAYS_OF_THE_WEEK[index];
+    const dayOfTheWeek = DISPLAYED_DAYS_OF_THE_WEEK[index];
 
     dailySpecialXCoordinate[dayOfTheWeek] =
       offset + DAILY_SPECIAL_SCROLL_AMOUNT * index;

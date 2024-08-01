@@ -7,14 +7,11 @@
   <head>
     <title>Hanmer Springs Foodway</title>
     <link rel="icon" href="./assets/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
 
-    <!--icons-->
+    <!--FontAwesome icons-->
     <link href="./fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="./fontawesome/css/brands.css" rel="stylesheet" />
     <link href="./fontawesome/css/solid.css" rel="stylesheet" />
-
-    <script defer type="text/javascript" src="./scripts.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -30,6 +27,10 @@
 
       gtag("config", "G-MVTNC9MC3X");
     </script>
+
+    <!--custom styles and scripts-->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script defer type="text/javascript" src="./scripts.js"></script>
   </head>
 
   <body>
@@ -250,7 +251,6 @@
         </div>
 
         <nav id="specials-tab-group">
-          <button id="sunday-tab-button" class="tab-button">Sunday</button>
           <button id="monday-tab-button" class="tab-button">Monday</button>
           <button id="tuesday-tab-button" class="tab-button">Tuesday</button>
           <button id="wednesday-tab-button" class="tab-button">
@@ -259,76 +259,14 @@
           <button id="thursday-tab-button" class="tab-button">Thursday</button>
           <button id="friday-tab-button" class="tab-button">Friday</button>
           <button id="saturday-tab-button" class="tab-button">Saturday</button>
+          <button id="sunday-tab-button" class="tab-button">Sunday</button>
         </nav>
 
         <div id="specials-tab-content">
-          <div class="tab-content first-tab-content" id="sunday-tab-content">
+          <div class="tab-content first-tab-content" id="monday-tab-content">
             <div class="special-card">
               <nav class="specials-mobile-nav">
                 <button class="mobile-nav-button"></button>
-
-                <div class="day-of-the-week">Sunday</div>
-
-                <button class="next-day-button mobile-nav-button">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5592 13.0591C18.1451 12.4732 18.1451 11.5216 17.5592 10.9357L11.5592 4.93568C11.1279 4.50443 10.4857 4.37786 9.92324 4.61224C9.36074 4.84661 8.99512 5.39036 8.99512 5.99974V17.9997C8.99512 18.6044 9.36074 19.1529 9.92324 19.3872C10.4857 19.6216 11.1279 19.4904 11.5592 19.0638L17.5592 13.0638V13.0591Z"
-                      fill="#8C7F7C"
-                    />
-                  </svg>
-                </button>
-              </nav>
-
-              <img
-                class="special-image"
-                src="./assets/landing_page/daily_special/0_sunday.png"
-              />
-              <div class="special-text">
-                <div class="special-card-header">
-                  <div class="special-title">
-                    <h2 class="special-name">Sweet Chilli Chicken Bol</h2>
-                    <div class="special-energy">320 Cal</div>
-                  </div>
-
-                  <div class="special-price">
-                    <h3 class="special-discounted-price">$16</h3>
-                    <h3 class="special-regular-price">Regular Price: NZD 20</h3>
-                  </div>
-                </div>
-
-                <div class="special-description">
-                  Crispy fried chicken wings tossed in Korean sweet & spicy
-                  sauce. 8pc
-                </div>
-
-                <a class="cart-button"> Add to Cart </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="monday-tab-content">
-            <div class="special-card">
-              <nav class="specials-mobile-nav">
-                <button class="previous-day-button mobile-nav-button">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.44043 13.0591C5.85449 12.4732 5.85449 11.5216 6.44043 10.9357L12.4404 4.93568C12.8717 4.50443 13.5139 4.37786 14.0764 4.61224C14.6389 4.84661 15.0045 5.39036 15.0045 5.99974V17.9997C15.0045 18.6044 14.6389 19.1529 14.0764 19.3872C13.5139 19.6216 12.8717 19.4904 12.4404 19.0638L6.44043 13.0638V13.0591Z"
-                      fill="#8C7F7C"
-                    />
-                  </svg>
-                </button>
 
                 <div class="day-of-the-week">Monday</div>
 
@@ -350,7 +288,7 @@
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/1_monday.png"
+                src="./assets/landing_page/daily_special/0_monday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
@@ -415,7 +353,7 @@
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/2_tuesday.png"
+                src="./assets/landing_page/daily_special/1_tuesday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
@@ -477,7 +415,7 @@
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/3_wednesday.png"
+                src="./assets/landing_page/daily_special/2_wednesday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
@@ -539,7 +477,7 @@
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/4_thursday.png"
+                src="./assets/landing_page/daily_special/3_thursday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
@@ -555,7 +493,7 @@
                 </div>
 
                 <div class="special-description">
-                Rice bowl with marinated Korean spicy pork.
+                  Rice bowl with marinated Korean spicy pork.
                 </div>
 
                 <a class="cart-button"> Add to Cart </a>
@@ -601,12 +539,12 @@
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/5_friday.png"
+                src="./assets/landing_page/daily_special/4_friday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
                   <div class="special-title">
-                    <h2 class="special-name">Chicken Donkatsu Bol </h2>
+                    <h2 class="special-name">Chicken Donkatsu Bol</h2>
                     <div class="special-energy">324 Cal</div>
                   </div>
 
@@ -617,7 +555,8 @@
                 </div>
 
                 <div class="special-description">
-                  Rice bowl with panko breaded chicken breast katsu, topped with donkatsu (Asian BBQ) and chipotle aioli
+                  Rice bowl with panko breaded chicken breast katsu, topped with
+                  donkatsu (Asian BBQ) and chipotle aioli
                 </div>
 
                 <a class="cart-button"> Add to Cart </a>
@@ -625,7 +564,7 @@
             </div>
           </div>
 
-          <div class="tab-content last-tab-content" id="saturday-tab-content">
+          <div class="tab-content" id="saturday-tab-content">
             <div class="special-card">
               <nav class="specials-mobile-nav">
                 <button class="previous-day-button mobile-nav-button">
@@ -645,17 +584,30 @@
 
                 <div class="day-of-the-week">Saturday</div>
 
-                <button class="mobile-nav-button"></button>
+                <button class="next-day-button mobile-nav-button">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5592 13.0591C18.1451 12.4732 18.1451 11.5216 17.5592 10.9357L11.5592 4.93568C11.1279 4.50443 10.4857 4.37786 9.92324 4.61224C9.36074 4.84661 8.99512 5.39036 8.99512 5.99974V17.9997C8.99512 18.6044 9.36074 19.1529 9.92324 19.3872C10.4857 19.6216 11.1279 19.4904 11.5592 19.0638L17.5592 13.0638V13.0591Z"
+                      fill="#8C7F7C"
+                    />
+                  </svg>
+                </button>
               </nav>
 
               <img
                 class="special-image"
-                src="./assets/landing_page/daily_special/6_saturday.png"
+                src="./assets/landing_page/daily_special/5_saturday.png"
               />
               <div class="special-text">
                 <div class="special-card-header">
                   <div class="special-title">
-                    <h2 class="special-name">Donkatsu Chicken Bao </h2>
+                    <h2 class="special-name">Donkatsu Chicken Bao</h2>
                     <div class="special-energy">326 Cal</div>
                   </div>
 
@@ -666,7 +618,59 @@
                 </div>
 
                 <div class="special-description">
-                  Bao bun stuffed with panko fried chicken breast, cilantro, carrots, pickled radish, walnuts, and housemade brown sauce. 2 pc
+                  Bao bun stuffed with panko fried chicken breast, cilantro,
+                  carrots, pickled radish, walnuts, and housemade brown sauce. 2
+                  pc
+                </div>
+
+                <a class="cart-button"> Add to Cart </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content last-tab-content" id="sunday-tab-content">
+            <div class="special-card">
+              <nav class="specials-mobile-nav">
+                <button class="previous-day-button mobile-nav-button">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.44043 13.0591C5.85449 12.4732 5.85449 11.5216 6.44043 10.9357L12.4404 4.93568C12.8717 4.50443 13.5139 4.37786 14.0764 4.61224C14.6389 4.84661 15.0045 5.39036 15.0045 5.99974V17.9997C15.0045 18.6044 14.6389 19.1529 14.0764 19.3872C13.5139 19.6216 12.8717 19.4904 12.4404 19.0638L6.44043 13.0638V13.0591Z"
+                      fill="#8C7F7C"
+                    />
+                  </svg>
+                </button>
+
+                <div class="day-of-the-week">Sunday</div>
+
+                <button class="mobile-nav-button"></button>
+              </nav>
+
+              <img
+                class="special-image"
+                src="./assets/landing_page/daily_special/6_sunday.png"
+              />
+              <div class="special-text">
+                <div class="special-card-header">
+                  <div class="special-title">
+                    <h2 class="special-name">Sweet Chilli Chicken Bol</h2>
+                    <div class="special-energy">320 Cal</div>
+                  </div>
+
+                  <div class="special-price">
+                    <h3 class="special-discounted-price">$16</h3>
+                    <h3 class="special-regular-price">Regular Price: NZD 20</h3>
+                  </div>
+                </div>
+
+                <div class="special-description">
+                  Crispy fried chicken wings tossed in Korean sweet & spicy
+                  sauce. 8pc
                 </div>
 
                 <a class="cart-button"> Add to Cart </a>
